@@ -1,0 +1,22 @@
+.btn{
+    display: inline-block;
+    &:link,
+    &:active {
+        text-decoration: none;
+        padding: 1.5rem 3rem;
+        border-radius: 5rem;
+       
+    }
+
+    &--red {
+        background-color: $color-secondary;
+        color: $color-white;
+    }
+
+    &--white {
+        color: $color-primary;
+        font-weight: 700;
+        border: $color-primary solid 2px;
+        
+    }
+}

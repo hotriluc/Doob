@@ -1,5 +1,42 @@
 .header {
+    margin-top: 5rem;
     grid-column: center-start/ center-end;
-    background-color: orange;
-    height: 80vh;
+    
+
+    min-height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    flex: 0 0 45%;
+
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    
+    &> *:not(:last-child){
+        margin-bottom: 4rem;
+    }
+
+    &__text {
+        width: 85%;
+        color: $color-grey;
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+
+   
+}
+.hero {
+    z-index: 20;
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+
+    &__img{
+        height: 30vw;
+    }
 }

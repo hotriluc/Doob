@@ -17,7 +17,12 @@ body {
   font-family: Arial;
   color: #314584; }
 
+.heading-1 {
+  font-size: 6.5rem;
+  line-height: 1.2; }
+
 .container {
+  position: relative;
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(12, [col-start] 1fr [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-rows: 6.5rem repeat(7, min-content);
@@ -25,18 +30,50 @@ body {
   grid-column-gap: 2rem; }
 
 .header {
+  margin-top: 5rem;
   grid-column: center-start/ center-end;
-  background-color: orange;
-  height: 80vh; }
+  min-height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.title {
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start; }
+  .title > *:not(:last-child) {
+    margin-bottom: 4rem; }
+  .title__text {
+    width: 85%;
+    color: #868b8f;
+    font-size: 1.6rem;
+    line-height: 1.6; }
+
+.hero {
+  z-index: 20;
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center; }
+  .hero__img {
+    height: 30vw; }
 
 .navigation {
-  grid-column: 1/-1;
-  background-color: orchid; }
+  grid-column: center-start/center-end;
+  background-color: orchid;
+  z-index: 20; }
 
 .footer {
   grid-column: center-start/ center-end;
   background-color: orange;
   height: 80vh; }
+
+.big-cloud {
+  grid-column: col-start 6/ full-end;
+  z-index: 1;
+  height: 60rem;
+  width: 60rem; }
 
 .section-features {
   background-color: palegreen;
@@ -62,3 +99,20 @@ body {
   background-color: salmon;
   grid-column: center-start/ center-end;
   min-height: 60vh; }
+
+.btn {
+  display: inline-block; }
+  .btn:link, .btn:active {
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    border-radius: 5rem; }
+  .btn--red {
+    background-color: #ff3946;
+    color: #fafafa; }
+  .btn--white {
+    color: #314584;
+    font-weight: 700;
+    border: #314584 solid 2px; }
+
+.mg-right-small {
+  margin-right: 2rem; }
