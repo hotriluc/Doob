@@ -10,7 +10,8 @@ html {
 
 body {
   box-sizing: inherit;
-  padding-top: 3rem; }
+  padding-top: 3rem;
+  background-color: #fafafa; }
 
 body {
   font-size: 1.6rem;
@@ -61,8 +62,35 @@ body {
 
 .navigation {
   grid-column: center-start/center-end;
-  background-color: orchid;
-  z-index: 20; }
+  z-index: 20;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+
+.logo {
+  height: 60%; }
+
+.nav {
+  list-style: none;
+  margin-left: auto;
+  display: flex; }
+  .nav__item {
+    transition: all .4s; }
+    .nav__item:not(:last-of-type) {
+      margin-right: 3.5rem; }
+  .nav__item:hover {
+    transform: scale(1.1);
+    background-color: #ff3946; }
+  .nav__item:hover .nav__link {
+    color: #fafafa; }
+  .nav__link:visited, .nav__link:link {
+    color: #314584;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 2rem; }
 
 .footer {
   grid-column: center-start/ center-end;

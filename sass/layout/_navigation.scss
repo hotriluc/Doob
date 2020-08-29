@@ -1,7 +1,48 @@
 .navigation {
     grid-column: center-start/center-end;
-    background-color: orchid;
+    // background-color: orchid;
     // min-height: 6.5rem;
-
     z-index: 20;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.logo {
+    height: 60%;
+}
+
+.nav {
+    list-style: none;
+    margin-left: auto;
+    
+    display: flex;
+    
+    &__item{
+        transition: all .4s;
+    
+        &:not(:last-of-type){
+            margin-right: 3.5rem;
+        }
+    }
+
+    &__item:hover{
+        transform: scale(1.1);
+        background-color: $color-secondary;
+    }
+
+    &__item:hover &__link {
+        color: $color-white;
+    }
+
+    &__link:visited,
+    &__link:link {
+        color: $color-primary;
+        display: inline-block;
+        font-weight: 700;
+        font-size: 1.4rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1.5rem 2rem;
+        
+    }
 }
