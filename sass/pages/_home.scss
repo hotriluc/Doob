@@ -1,0 +1,34 @@
+
+
+.section-features {
+    background-color: palegreen;
+    grid-column: center-start/ center-end;
+    
+    //testing
+    min-height: 50vh;
+}
+
+.section-about {
+    background-color: plum;
+    grid-column: center-start/ center-end;
+    min-height: 50vh;
+
+}
+
+.section-gallery {
+    background-color: powderblue;
+    grid-column: center-start/ center-end;
+    min-height: 50vh;
+}
+
+.section-stories {
+    background-color: rebeccapurple;
+    grid-column: center-start/ center-end;
+    min-height: 40vh;
+}
+
+.section-call {
+    background-color: salmon;
+    grid-column: center-start/ center-end;
+    min-height: 60vh;
+}
