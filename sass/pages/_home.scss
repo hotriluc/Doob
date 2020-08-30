@@ -1,18 +1,46 @@
 
 
 .section-features {
-    background-color: palegreen;
+    // background-color: palegreen;
     grid-column: center-start/ center-end;
     
     //testing
+    margin-top: 10rem;
     min-height: 50vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
+
 .section-about {
-    background-color: plum;
+    // background-color: plum;
     grid-column: center-start/ center-end;
     min-height: 50vh;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 5rem;
+
+}
+
+.about{
+    &__block{
+        
+        flex: 0 0 40%;
+        
+
+        &>*:not(:last-child){
+            margin-bottom: 4rem;
+        }
+    }
+    &__img {
+        transform: scale(.75);
+    }
+
+  
 }
 
 .section-gallery {
@@ -32,3 +60,5 @@
     grid-column: center-start/ center-end;
     min-height: 60vh;
 }
+
+

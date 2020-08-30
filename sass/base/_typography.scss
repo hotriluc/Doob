@@ -9,3 +9,97 @@ body {
     font-size: 6.5rem;
     line-height: 1.2;
 }
+
+.heading-2 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+.heading-3 {
+    font-size: 2.4rem;
+}
+
+.heading-4 {
+    text-transform: uppercase;
+    color:  $color-secondary;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+
+/*NAV*/
+.nav {
+ 
+    &__link:visited,
+    &__link:link {
+        color: $color-primary;
+        display: inline-block;
+        font-weight: 700;
+        font-size: 1.4rem;
+        text-decoration: none;
+        text-transform: uppercase;
+      
+        
+    }
+}
+
+/*HEADER*/
+//title
+.title {
+
+    &__text {
+        color: $color-grey;
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+
+}
+/*feature text*/
+.feature{
+    &__text {
+        font-size: 1.4rem;
+        line-height: 1.6;
+        font-weight: 400;
+    }
+}
+/*about text*/
+.about{
+    &__text{
+        font-weight: 400;
+        line-height: 1.6;
+    }
+}
+
+/*FOOTER*/
+.footer {
+
+    color: $color-white;
+
+    &__name {
+        color: $color-white;
+        font-weight: 700;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+
+    }
+
+    &__title {
+        color: $color-secondary;
+        font-weight: 400;
+        font-size: 4.5rem;
+        text-transform: uppercase;
+    }
+
+    & .nav__link:visited,
+    & .nav__link:link {
+        color: $color-white;
+    }
+}
+
+
+/*Copyright*/
+
+.copyright {
+    font-size: 1.4rem;
+    letter-spacing: 1.2px;
+}
