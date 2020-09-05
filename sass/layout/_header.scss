@@ -1,42 +1,61 @@
-.header {
-    margin-top: 5rem;
-    grid-column: center-start/ center-end;
+.header{
+    height: 85vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.801),
+        rgba($color-primary-dark, 0.801)),
+         url(../img/hero-small.jpg);
+    background-size: cover;
+    background-position: top;
+    //clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        height: 95vh;
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    }
+
+    @media  only screen and (min-resolution: 192dpi) and (min-width:37.5em), 
+            only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width:37.5em), 
+            only screen and (min-width: 125em)  {
+        background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.801),
+        rgba($color-primary-dark, 0.801)),
+         url(../img/hero.jpg);
+    }
+
+    
+    
+    @include respond(tab-port) {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%) ;
+    }
+
+    @include respond(phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 89vh, 0 100%) ;
+    }
+    
+    &__logo-box{
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+
+    }
+
+    &__logo{
+        height: 3.5rem;
+    }
+
+    
+    &__text-box{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    
+    }
     
 
-    min-height: 90vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.title {
-    flex: 0 0 45%;
-
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    z-index: 20;
-    
-    &> *:not(:last-child){
-        margin-bottom: 4rem;
-    }
-
-    &__text {
-        width: 85%;
-
-    }
-
-}
-
-.hero {
-    z-index: 20;
-    flex: 0 0 50%;
-    display: flex;
-    justify-content: center;
-
-    &__img{
-        height: 30vw;
-        transform: scale(1.2) translateX(4rem);
-    }
 }
